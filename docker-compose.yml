@@ -1,0 +1,12 @@
+services:
+  calculator:
+    build: .
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    working_dir: /calculator_microservice
+    volumes:
+      - ./calculator_microservice:/calculator_microservice
+    command: ["node", "index.js"]

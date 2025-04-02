@@ -1,22 +1,18 @@
-# Define the parent image for the Node.JS runtime
-FROM node:18-alpine
+# Dockerfile
+FROM node:20-alpine
 
-# Set the working directory to the calculator microservice
+# Set working directory
 WORKDIR /calculator_microservice
 
-# Copy the package json files as these contain the service dependancies/config
-COPY package*.json ./
+# Copy package files and install dependencies
+COPY calculator_microservice/package*.json ./
+RUN npm install
 
-# Install the dependancies from the copied files
-RUN npm install --omit=dev
+# Copy the rest of the app files
+COPY calculator_microservice/ ./
 
-# Copy the files from the application
-COPY . . 
-
-# Expose the port which the microservice listens to
+# Expose the service port
 EXPOSE 3000
 
-# Run the app build using the appropriate command, in our case I'll use the 
-# same start script as I used for development, but this would typically be 
-# a script to run the production build in the Docker container
-CMD ["nodemon", "index.js"]
+# Start the application
+CMD ["node", "index.js"]

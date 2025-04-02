@@ -1,15 +1,11 @@
 {
-  "name": "sit323-2025-prac4p",
+  "name": "sit323-2025-prac5p",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jsb-dev/sit323-2025-prac4p.git"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
