@@ -34,5 +34,10 @@ The Dockerfile defines the single container image, but to compose this effective
 ### Summary
 
 - Cloned app
+- Established Git repo
 - Defined docker image, including app deps and runtime config
 - Defined composition behaviour in service context
+- Established Docker repo
+- Pushed code and image to corresponding repositories
+
+After completing these steps I updated the project's composition behaviour to draw on the registry image instead of the local image, clarifying that it can be pulled and deployed remotely from anywhere.
