@@ -4,8 +4,8 @@ services:
 # This is the calculator microservice,
 # More can be added as the application scales
   calculator:
-  # Build the image from the Dockerfile in the current directory
-    build: .
+  # Build the image from the image registry
+    image: jsbdevdocker/calculator_microservice:latest
     # Expose the service port
     ports:
       - "3000:3000"
