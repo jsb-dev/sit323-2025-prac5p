@@ -1,7 +1,5 @@
 # sit323-2025-prac5p
 
-Description
-
 ## Getting Started
 
 - The original project cloned for the microservice is a simple Node.js REST Server
